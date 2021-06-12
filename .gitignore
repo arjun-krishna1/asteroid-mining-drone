@@ -27,6 +27,7 @@
 .vs/
 .vscode/
 data/
+.ipynb_checkpoints/
 
 # Gradle cache directory
 .gradle/
