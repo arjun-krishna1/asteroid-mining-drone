@@ -17,9 +17,9 @@ public class AsteroidGenerator : MonoBehaviour
 
     public Rigidbody asteroidPrefab;
     [Range(1, 100)]
-    public int numberOfAsteroids;
+    public int numberOfAsteroids = 10;
     [Range(10, 100)]
-    public int maxSpawnDist;
+    public int maxSpawnDist = 100;
     private Rigidbody[] asteroids;
 
     AsteroidType[] asteroidTypes;
