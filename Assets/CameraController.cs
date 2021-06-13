@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [Range(0.0f, 45.0f)]
-    public float rotationSpeed = 0.5f;
-    private string basePath = System.IO.Directory.GetCurrentDirectory()+"/data/" ;
+    private string basePath = System.IO.Directory.GetCurrentDirectory() + "/data/";
+
+    private int speed = 10;
+
+    private int frame = 0;
 
     void Update()
     {
-        ScreenCapture.CaptureScreenshot(basePath + "frame"+Time.frameCount+"-"+transform.eulerAngles.ToString()+".png");
-        transform.Rotate(rotationSpeed, rotationSpeed, 0.0f, Space.Self);
+        ScreenCapture.CaptureScreenshot(GetImageName());
+        transform.Translate(Vector3.up * Time.deltaTime * speed, Space.World);
+        print(transform.position.ToString());
+    }
+
+    private string GetImageName()
+    {
+        return basePath + frame + "/frame" + Time.frameCount + "-" + transform.eulerAngles.ToString();
     }
 }

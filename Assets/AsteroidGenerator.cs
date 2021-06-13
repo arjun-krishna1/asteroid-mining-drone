@@ -33,7 +33,6 @@ public class AsteroidGenerator : MonoBehaviour
         asteroids = new Rigidbody[numberOfAsteroids];
         for(int i = 0; i <numberOfAsteroids; i++) {
             asteroids[i] = generateRandomAsteroid();
-            print(i);
         }
     }
 
@@ -48,7 +47,6 @@ public class AsteroidGenerator : MonoBehaviour
     Rigidbody generateRandomAsteroid() {
         Vector3 newLoc = new Vector3(0, 0, 0);
         newLoc.x = Random.Range(-maxSpawnDist, maxSpawnDist);
-        newLoc.y = Random.Range(-maxSpawnDist, maxSpawnDist);
         newLoc.z = Random.Range(-maxSpawnDist, maxSpawnDist);
 
         Rigidbody newRb = Instantiate(asteroidPrefab, newLoc, Quaternion.identity) as Rigidbody;
