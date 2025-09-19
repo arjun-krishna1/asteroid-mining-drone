@@ -1,6 +1,8 @@
 # %%
 import numpy as np
 import cv2 as cv
+import pandas as pd
+
 # %%
 img_red = cv.imread('data/frame100-(41.8, 62.7, 25.9).png')
 img_blue = cv.imread('data/frame200-(26.8, 150.2, 82.7).png')
