@@ -1,7 +1,6 @@
 # %%
 import numpy as np
 import cv2 as cv
-import pandas as pd
 
 # %%
 img_red = cv.imread('data/frame100-(41.8, 62.7, 25.9).png')
