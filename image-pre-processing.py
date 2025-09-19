@@ -1,6 +1,13 @@
 # %%
 import numpy as np
 import cv2 as cv
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # %%
 img_red = cv.imread('data/frame100-(41.8, 62.7, 25.9).png')
